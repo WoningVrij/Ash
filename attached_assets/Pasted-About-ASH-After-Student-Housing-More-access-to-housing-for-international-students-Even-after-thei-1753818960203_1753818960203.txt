@@ -1,0 +1,151 @@
+About ASH — After Student Housing
+More access to housing for international students. Even after their studies.
+
+International students contribute to the life and energy of Dutch cities. But when their studies come to an end, their housing options often disappear.
+Student rooms must be vacated. Studios are temporary. And the regular housing market is a dead end: no permanent job contract, no Dutch paperwork, no long rental history.
+ASH offers a real alternative.
+
+After Student Housing (ASH) is specifically for international students and recent graduates who want to stay in the Netherlands but struggle to find a place to live.
+Some have just finished studying. Others are starting their careers, building networks, or creating a future here.
+ASH helps them find affordable housing — without all the usual paperwork.
+
+Our approach: flexible, creative, and legally sound
+
+ASH develops temporary housing projects in vacant buildings in and around major cities.
+We literally build on opportunity — using legal space, cooperation with property owners and municipalities, and support from our in-house anti-squatting organization.
+
+Our first projects launch in Amsterdam-East and Haarlem-Center:
+
+    In Amsterdam, we’re converting a former office building into rooms and studios, with permission from the owner and in consultation with the city.
+
+    In Haarlem, we’re starting in a building that’s mostly move-in ready.
+
+In both cities, we’re creating fully furnished living spaces for students, graduates, and job seekers — with no unnecessary barriers.
+
+At ASH, we do not require:
+
+    Payslips
+
+    Employer statement
+
+    BRP (Dutch municipal registration)
+
+    Bank statements
+
+    Previous landlord reference
+
+    Annual income summary
+
+    Credit check (BKR)
+
+Instead, we ask for 1 year of rent upfront.
+We know that’s a big commitment — but it’s the only way to make this accessible, fair housing model possible.
+
+What does it cost?
+
+    Room – €525 per month → €6,300 per year (all-in)
+
+    Studio – €1,250 per month → €15,000 per year (all-in)
+
+Includes: gas, water, electricity, internet, furniture, municipal taxes.
+
+For whom?
+Anyone between 18 and 35 years old who is studying, just graduated, or wants to stay in the Netherlands to build their future.
+
+Internationals are welcome.
+No bureaucracy. No stress. Just housing.
+
+🔷 Nieuw concept — Waar gaat de website over? Wat is het hoofddoel?
+
+De website van ASH (After Student Housing) is gericht op het aanbieden van tijdelijke, toegankelijke huisvesting aan internationale studenten en starters ná hun studie.
+Het hoofddoel is:
+
+    Informatie geven over wie ASH is en hoe het werkt
+
+    Beschikbare woonruimtes (kamers/studio’s) tonen
+
+    Studenten de mogelijkheid geven om zich snel en eenvoudig aan te melden voor een woonplek
+
+    Transparantie bieden over de voorwaarden (zoals jaarbetaling, wat inbegrepen is, etc.)
+
+🎯 Doelgroep — Voor wie is de website bedoeld?
+
+    Internationale studenten (18–35 jaar)
+
+    Net afgestudeerden die in Nederland willen blijven
+
+    Starters die nog geen volledige papieren hebben voor de reguliere huurmarkt
+
+    Mensen die flexibel, tijdelijk, maar kwalitatief goed willen wonen in steden als Amsterdam of Haarlem
+
+🎨 Kleurgebruik — Heb je voorkeuren voor kleuren of een huisstijl?
+
+Gebaseerd op het logo en je concept past de volgende huisstijl goed:
+
+    Zwart & wit als basis: minimalistisch, strak, professioneel
+
+    Accentkleur: warm oranje of koper (verwijzing naar de feniks / herstart / energie)
+
+    Eventueel ondersteunend: lichtgrijs of taupe als neutrale achtergrondkleur
+
+Lettertypes:
+
+    Sans-serif voor moderniteit en leesbaarheid (zoals Inter, Montserrat, of Roboto)
+
+    Strakke, duidelijke koppen + toegankelijke bodytekst
+
+🧭 Belangrijkste secties — Welke onderdelen moeten op de website staan?
+
+    Homepagina
+
+        Introductie van ASH
+
+        Call-to-action: “Bekijk beschikbaarheid” of “Meld je aan”
+
+    Over ASH
+
+        Missie & visie
+
+        Waarom het bestaat
+
+        De aanpak (flexibel, creatief, juridisch stevig)
+
+    Projecten / Locaties
+
+        Info over Amsterdam & Haarlem
+
+        Kaart, foto's, beschikbaarheid (kamers/studio’s)
+
+    Voorwaarden & Prijzen
+
+        Wat is inbegrepen
+
+        Geen documenten nodig
+
+        Jaarbetaling uitgelegd
+
+    Veelgestelde vragen (FAQ)
+
+        Termijnen? Borg? Kan ik eerder weg? Is het veilig? Etc.
+
+    Aanmelden / Interesse tonen
+
+        Inschrijfformulier of contactformulier
+
+        Uploadmogelijkheid voor ID en bewijs van studentstatus (optioneel)
+
+    Contact / Team / Samenwerken
+
+        Contactgegevens
+
+        Partnerschap mogelijk met gemeentes/eigenaren
+
+⚙️ Specifieke functionaliteiten — Zijn er bijzondere functies die de website moet hebben?
+
+    Contactformulier
+
+    Beschikbaarheid tonen per locatie 
+
+    Taalkeuze Engels standaard, maar NL toggle
+
+    Mobielvriendelijk design voor studenten op telefoon/tablet
