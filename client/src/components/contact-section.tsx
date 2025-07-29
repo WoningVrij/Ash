@@ -54,21 +54,21 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-ash-light to-white">
+    <section id="contact" className="py-24 bg-gradient-modern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-ash-dark mb-6 tracking-tight">
             {t.contact.title}
           </h2>
-          <p className="text-xl text-ash-gray max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-ash-gray max-w-4xl mx-auto leading-relaxed">
             {t.contact.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold text-black mb-6">{t.contact.form.title}</h3>
+          <div className="bg-white rounded-3xl p-10 shadow-modern-lg card-hover">
+            <h3 className="text-3xl font-bold text-ash-dark mb-8 tracking-tight">{t.contact.form.title}</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>

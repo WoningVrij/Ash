@@ -14,30 +14,30 @@ export function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-br from-ash-light to-white">
+    <section id="pricing" className="py-24 bg-gradient-modern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold text-ash-dark mb-6 tracking-tight">
             {t.pricing.title}
           </h2>
-          <p className="text-xl text-ash-gray max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-ash-gray max-w-4xl mx-auto leading-relaxed">
             {t.pricing.subtitle}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Room Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-transparent hover:border-ash-orange transition-colors">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-black mb-2">{t.pricing.room.title}</h3>
-              <p className="text-ash-gray">{t.pricing.room.subtitle}</p>
+          <div className="bg-white rounded-3xl shadow-modern-lg p-10 border-2 border-transparent hover:border-ash-orange transition-all duration-300 card-hover">
+            <div className="text-center mb-10">
+              <h3 className="text-3xl font-bold text-ash-dark mb-3 tracking-tight">{t.pricing.room.title}</h3>
+              <p className="text-ash-gray text-lg">{t.pricing.room.subtitle}</p>
             </div>
 
-            <div className="text-center mb-8">
-              <div className="text-5xl font-bold text-ash-orange mb-2">€525</div>
-              <div className="text-lg text-ash-gray">{t.pricing.room.perMonth}</div>
-              <div className="text-3xl font-bold text-black mt-4">€6,300</div>
-              <div className="text-lg text-ash-gray">{t.pricing.room.annually}</div>
+            <div className="text-center mb-10">
+              <div className="text-6xl font-bold text-ash-orange mb-3">€525</div>
+              <div className="text-xl text-ash-gray">{t.pricing.room.perMonth}</div>
+              <div className="text-4xl font-bold text-ash-dark mt-6">€6,300</div>
+              <div className="text-xl text-ash-gray">{t.pricing.room.annually}</div>
             </div>
 
             <div className="space-y-4 mb-8">
@@ -72,24 +72,24 @@ export function PricingSection() {
           </div>
 
           {/* Studio Pricing */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-ash-orange relative">
+          <div className="bg-white rounded-3xl shadow-modern-lg p-10 border-2 border-ash-orange relative card-hover">
             {/* Popular badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-              <Badge className="bg-ash-orange text-white px-6 py-2">
+            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
+              <Badge className="bg-gradient-orange text-white px-8 py-3 text-lg font-bold shadow-orange">
                 {t.pricing.studio.popular}
               </Badge>
             </div>
 
-            <div className="text-center mb-8 mt-4">
-              <h3 className="text-2xl font-bold text-black mb-2">{t.pricing.studio.title}</h3>
-              <p className="text-ash-gray">{t.pricing.studio.subtitle}</p>
+            <div className="text-center mb-10 mt-6">
+              <h3 className="text-3xl font-bold text-ash-dark mb-3 tracking-tight">{t.pricing.studio.title}</h3>
+              <p className="text-ash-gray text-lg">{t.pricing.studio.subtitle}</p>
             </div>
 
-            <div className="text-center mb-8">
-              <div className="text-5xl font-bold text-ash-orange mb-2">€1,250</div>
-              <div className="text-lg text-ash-gray">{t.pricing.studio.perMonth}</div>
-              <div className="text-3xl font-bold text-black mt-4">€15,000</div>
-              <div className="text-lg text-ash-gray">{t.pricing.studio.annually}</div>
+            <div className="text-center mb-10">
+              <div className="text-6xl font-bold text-ash-orange mb-3">€1,250</div>
+              <div className="text-xl text-ash-gray">{t.pricing.studio.perMonth}</div>
+              <div className="text-4xl font-bold text-ash-dark mt-6">€15,000</div>
+              <div className="text-xl text-ash-gray">{t.pricing.studio.annually}</div>
             </div>
 
             <div className="space-y-4 mb-8">

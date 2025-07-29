@@ -7,6 +7,7 @@ ASH (After Student Housing) is a web application designed to provide housing sol
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design preference: Modern and professional appearance (updated Jan 29, 2025).
 
 ## System Architecture
 

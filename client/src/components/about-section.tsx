@@ -5,49 +5,49 @@ export function AboutSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-white to-ash-light">
+    <section id="about" className="py-24 bg-gradient-modern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-ash-dark mb-8 tracking-tight">
               {t.about.title}
             </h2>
-            <p className="text-lg text-ash-gray mb-6">
+            <p className="text-xl text-ash-gray mb-8 leading-relaxed">
               {t.about.description1}
             </p>
-            <p className="text-lg text-ash-gray mb-6">
+            <p className="text-xl text-ash-gray mb-8 leading-relaxed">
               {t.about.description2}
             </p>
-            <p className="text-lg text-ash-orange font-semibold mb-8">
+            <p className="text-2xl text-ash-orange font-bold mb-12 tracking-tight">
               {t.about.subtitle}
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-8">
               <div className="flex items-start">
-                <div className="w-6 h-6 bg-ash-orange rounded-full flex items-center justify-center mr-4 mt-1">
-                  <Check className="text-white w-4 h-4" />
+                <div className="w-8 h-8 bg-gradient-orange rounded-xl flex items-center justify-center mr-6 mt-1 shadow-orange">
+                  <Check className="text-white w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-black">{t.about.flexible.title}</h4>
-                  <p className="text-ash-gray">{t.about.flexible.description}</p>
+                  <h4 className="text-xl font-bold text-ash-dark mb-2">{t.about.flexible.title}</h4>
+                  <p className="text-ash-gray text-lg leading-relaxed">{t.about.flexible.description}</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-6 h-6 bg-ash-orange rounded-full flex items-center justify-center mr-4 mt-1">
-                  <Check className="text-white w-4 h-4" />
+                <div className="w-8 h-8 bg-gradient-orange rounded-xl flex items-center justify-center mr-6 mt-1 shadow-orange">
+                  <Check className="text-white w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-black">{t.about.legal.title}</h4>
-                  <p className="text-ash-gray">{t.about.legal.description}</p>
+                  <h4 className="text-xl font-bold text-ash-dark mb-2">{t.about.legal.title}</h4>
+                  <p className="text-ash-gray text-lg leading-relaxed">{t.about.legal.description}</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-6 h-6 bg-ash-orange rounded-full flex items-center justify-center mr-4 mt-1">
-                  <Check className="text-white w-4 h-4" />
+                <div className="w-8 h-8 bg-gradient-orange rounded-xl flex items-center justify-center mr-6 mt-1 shadow-orange">
+                  <Check className="text-white w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-black">{t.about.purposeBuilt.title}</h4>
-                  <p className="text-ash-gray">{t.about.purposeBuilt.description}</p>
+                  <h4 className="text-xl font-bold text-ash-dark mb-2">{t.about.purposeBuilt.title}</h4>
+                  <p className="text-ash-gray text-lg leading-relaxed">{t.about.purposeBuilt.description}</p>
                 </div>
               </div>
             </div>
@@ -60,16 +60,16 @@ export function AboutSection() {
               className="rounded-2xl shadow-xl w-full h-auto"
             />
 
-            {/* Statistics overlay */}
-            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-xl">
-              <div className="grid grid-cols-2 gap-4 text-center">
+            {/* Modern statistics overlay */}
+            <div className="absolute bottom-8 left-8 right-8 glass-effect p-8 rounded-2xl shadow-modern">
+              <div className="grid grid-cols-2 gap-6 text-center">
                 <div>
-                  <div className="text-2xl font-bold text-ash-orange">2</div>
-                  <div className="text-sm text-ash-gray">Cities</div>
+                  <div className="text-3xl font-bold text-ash-orange">2</div>
+                  <div className="text-sm text-ash-gray font-medium">Cities</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-ash-orange">100%</div>
-                  <div className="text-sm text-ash-gray">Furnished</div>
+                  <div className="text-3xl font-bold text-ash-orange">100%</div>
+                  <div className="text-sm text-ash-gray font-medium">Furnished</div>
                 </div>
               </div>
             </div>

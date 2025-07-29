@@ -18,50 +18,50 @@ export function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-100 z-50">
+    <nav className="fixed top-0 w-full glass-effect border-b border-gray-200/30 z-50 shadow-modern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center">
-            <AshLogo className="h-8 w-8 text-ash-orange" />
-            <span className="ml-3 text-xl font-bold text-black">ASH</span>
+            <AshLogo className="h-10 w-10 text-ash-orange" />
+            <span className="ml-3 text-2xl font-bold text-ash-dark tracking-tight">ASH</span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.home}
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.about}
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.projects}
             </button>
             <button
               onClick={() => scrollToSection('pricing')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.pricing}
             </button>
             <button
               onClick={() => scrollToSection('faq')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.faq}
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-ash-dark hover:text-ash-orange transition-colors"
+              className="text-ash-gray hover:text-ash-orange transition-all duration-300 font-medium py-2 px-3 rounded-lg hover:bg-ash-orange-light"
             >
               {t.nav.contact}
             </button>

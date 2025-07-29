@@ -4,31 +4,35 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --foreground: hsl(224, 71.4%, 4.1%);
+  --muted: hsl(220, 14.3%, 95.9%);
+  --muted-foreground: hsl(220, 8.9%, 46.1%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(224, 71.4%, 4.1%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(24, 90%, 53%);
-  --primary-foreground: hsl(0, 0%, 98%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
+  --card-foreground: hsl(224, 71.4%, 4.1%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(22, 92%, 50%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(220, 14.3%, 95.9%);
+  --secondary-foreground: hsl(220.9, 39.3%, 11%);
+  --accent: hsl(220, 14.3%, 95.9%);
+  --accent-foreground: hsl(220.9, 39.3%, 11%);
   --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
-  --radius: 0.5rem;
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(224, 71.4%, 4.1%);
+  --radius: 8px;
   
-  /* ASH Custom Colors */
-  --ash-orange: hsl(24, 90%, 53%);
-  --ash-dark: hsl(210, 11%, 15%);
-  --ash-gray: hsl(215, 16%, 47%);
-  --ash-light: hsl(210, 40%, 98%);
+  /* Modern ASH Brand Colors */
+  --ash-orange: hsl(22, 92%, 50%);
+  --ash-orange-light: hsl(24, 95%, 95%);
+  --ash-orange-dark: hsl(20, 87%, 45%);
+  --ash-dark: hsl(224, 71%, 4%);
+  --ash-gray: hsl(220, 9%, 46%);
+  --ash-light: hsl(220, 14%, 96%);
+  --ash-blue: hsl(217, 91%, 60%);
+  --ash-neutral: hsl(220, 6%, 97%);
 }
 
 .dark {
@@ -62,16 +66,41 @@
   body {
     @apply font-sans antialiased bg-background text-foreground;
     font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
   }
 
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Modern design elements */
+  .gradient-bg {
+    background: linear-gradient(135deg, var(--ash-neutral) 0%, var(--ash-light) 100%);
+  }
+
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .glass-effect {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
 @layer utilities {
   .text-ash-orange {
     color: var(--ash-orange);
+  }
+  
+  .text-ash-orange-dark {
+    color: var(--ash-orange-dark);
   }
   
   .text-ash-dark {
@@ -86,12 +115,24 @@
     background-color: var(--ash-orange);
   }
   
+  .bg-ash-orange-light {
+    background-color: var(--ash-orange-light);
+  }
+  
+  .bg-ash-orange-dark {
+    background-color: var(--ash-orange-dark);
+  }
+  
   .bg-ash-dark {
     background-color: var(--ash-dark);
   }
   
   .bg-ash-light {
     background-color: var(--ash-light);
+  }
+  
+  .bg-ash-neutral {
+    background-color: var(--ash-neutral);
   }
   
   .border-ash-orange {
@@ -102,7 +143,33 @@
     background-color: var(--ash-orange);
   }
   
+  .hover\:bg-ash-orange-dark:hover {
+    background-color: var(--ash-orange-dark);
+  }
+  
   .hover\:text-ash-orange:hover {
     color: var(--ash-orange);
+  }
+
+  /* Modern gradients */
+  .bg-gradient-modern {
+    background: linear-gradient(135deg, var(--ash-neutral) 0%, var(--ash-light) 100%);
+  }
+
+  .bg-gradient-orange {
+    background: linear-gradient(135deg, var(--ash-orange) 0%, var(--ash-orange-dark) 100%);
+  }
+
+  /* Enhanced shadows */
+  .shadow-modern {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .shadow-modern-lg {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  .shadow-orange {
+    box-shadow: 0 4px 20px rgba(234, 88, 12, 0.25);
   }
 }
