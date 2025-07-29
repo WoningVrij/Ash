@@ -37,35 +37,41 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  const server = await registerRoutes(app);
+  try {
+    console.log('Initializing server...');
+    const server = await registerRoutes(app);
 
-  app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
-    const status = err.status || err.statusCode || 500;
-    const message = err.message || "Internal Server Error";
+    app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
+      const status = err.status || err.statusCode || 500;
+      const message = err.message || "Internal Server Error";
+      console.error('Server error:', err);
+      res.status(status).json({ message });
+    });
 
-    res.status(status).json({ message });
-    throw err;
-  });
-
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
-  if (app.get("env") === "development") {
-    await setupVite(app, server);
-  } else {
+  // In development, we'll use Vite's dev server for serving frontend assets
+  // and proxy API requests to the Express server
+  if (app.get("env") === "production") {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on the port specified in the environment variable PORT
-  // Other ports are firewalled. Default to 5000 if not specified.
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = parseInt(process.env.PORT || '5000', 10);
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
-  });
+    // Using port 3000 as it's a common development port and may have better compatibility
+    const port = parseInt(process.env.PORT || '3000', 10);
+    console.log(`Attempting to start server on port ${port}...`);
+    
+    server.listen(port, '127.0.0.1', () => {
+      console.log(`Server is running at http://localhost:${port}`);
+      console.log('Press Ctrl+C to stop the server');
+    }).on('error', (err: NodeJS.ErrnoException) => {
+      console.error('Failed to start server:', err);
+      if (err.code === 'EADDRINUSE') {
+        console.error(`Port ${port} is already in use. Please try a different port.`);
+      } else if (err.code === 'EACCES') {
+        console.error(`Port ${port} requires elevated privileges. Try a port above 1024.`);
+      }
+      process.exit(1);
+    });
+  } catch (error) {
+    console.error('Fatal error during server initialization:', error);
+    process.exit(1);
+  }
 })();

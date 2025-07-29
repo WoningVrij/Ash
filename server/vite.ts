@@ -1,10 +1,17 @@
-import express, { type Express } from "express";
+import express, { type Express, type Request, type Response, type NextFunction } from "express";
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
+import type { IncomingMessage, ServerResponse } from 'http';
 import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
+
+// Get __dirname equivalent in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const viteLogger = createLogger();
 
@@ -22,8 +29,15 @@ export function log(message: string, source = "express") {
 export async function setupVite(app: Express, server: Server) {
   const serverOptions = {
     middlewareMode: true,
-    hmr: { server },
-    allowedHosts: true as const,
+    hmr: {
+      port: 24678, // Standard HMR port
+      clientPort: 24678,
+      server
+    },
+    host: 'localhost',
+    port: 3000,
+    strictPort: true,
+    open: false
   };
 
   const vite = await createViteServer({
@@ -41,7 +55,7 @@ export async function setupVite(app: Express, server: Server) {
   });
 
   app.use(vite.middlewares);
-  app.use("*", async (req, res, next) => {
+  app.use("*", async (req: Request, res: Response, next: NextFunction) => {
     const url = req.originalUrl;
 
     try {
@@ -67,7 +81,7 @@ export async function setupVite(app: Express, server: Server) {
   });
 }
 
-export function serveStatic(app: Express) {
+export function serveStatic(app: Express): void {
   const distPath = path.resolve(import.meta.dirname, "public");
 
   if (!fs.existsSync(distPath)) {
