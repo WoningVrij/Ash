@@ -1,13 +1,28 @@
 [build]
-  command = "npm install --legacy-peer-deps && npm run build"
-  publish = "dist/public"
+  # Install dependencies for both root and client
+  command = "npm install && cd client && npm install && cd .."
+  
+  # Build the Vite application
+  publish = "client/dist"
+  base = "client"
+  
+  # Environment variables
+  [build.environment]
+    NODE_VERSION = "18"
 
+# Development settings (for netlify dev)
 [dev]
-  command = "npm run dev"
-  port = 3000
-  publish = "dist/public"
+  command = "npm run dev:all"
+  port = 5173  # Vite's default port
+  publish = "client/dist"
+  targetPort = 5173
 
+# Redirect all requests to index.html for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Configure build settings for the client
+[build.processing]
+  skip_processing = true
