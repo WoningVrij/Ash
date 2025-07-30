@@ -12,7 +12,7 @@
     "start": "cd client && npm run preview",
     "check": "tsc",
     "db:push": "drizzle-kit push",
-    "netlify-build": "npm install && cd client && npm install && npm run build"
+    "netlify-build": "npm install --legacy-peer-deps && cd client && npm install --legacy-peer-deps && npm run build"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
