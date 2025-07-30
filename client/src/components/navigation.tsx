@@ -22,9 +22,11 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <AshLogo className="h-10 w-10 text-ash-orange" />
-            <span className="ml-3 text-2xl font-bold text-ash-dark tracking-tight">ASH</span>
+          <div className="flex items-center gap-1">
+            <AshLogo className="h-[60px] w-[60px] text-ash-orange" />
+            <span className="text-2xl font-bold text-ash-dark tracking-tight relative top-[-1px]" style={{lineHeight: 1, fontFamily: `'Comic Neue', cursive`}}>
+              <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>A</span>fter <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>S</span>tudent <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>H</span>ousing
+            </span>
           </div>
 
           {/* Desktop Navigation */}

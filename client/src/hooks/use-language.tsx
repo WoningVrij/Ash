@@ -17,7 +17,7 @@ export function useLanguage() {
   return context;
 }
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
+export function LanguageProvider({ children }: { children: React.ReactNode }): JSX.Element {
   const [language, setLanguage] = useState<Language>('en');
 
   useEffect(() => {

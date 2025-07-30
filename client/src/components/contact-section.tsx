@@ -21,19 +21,27 @@ export function ContactSection() {
 
     try {
       const formData = new FormData(e.currentTarget);
-      const data = {
-        firstName: formData.get('firstName') as string,
-        lastName: formData.get('lastName') as string,
-        email: formData.get('email') as string,
-        phone: formData.get('phone') as string,
-        preferredLocation: formData.get('preferredLocation') as string,
-        roomType: formData.get('roomType') as string,
-        currentStatus: formData.get('currentStatus') as string,
-        movingDate: formData.get('movingDate') as string,
-        additionalInfo: formData.get('additionalInfo') as string,
-      };
+      
+      // Map form data to Google Form field names
+      const googleFormData = new URLSearchParams();
+      googleFormData.append('entry.1692253209', formData.get('firstName') as string);  // First Name
+      googleFormData.append('entry.807464301', formData.get('lastName') as string);   // Last Name
+      googleFormData.append('entry.120832022', formData.get('email') as string);      // Email
+      googleFormData.append('entry.1711027045', formData.get('phone') as string);     // Phone
+      
+      // Add default values for required fields
+      googleFormData.append('entry.1238028819', 'Either Location');  // Location preference
+      googleFormData.append('entry.1829289710', 'Room (€525/month)'); // Room type
+      googleFormData.append('entry.268914346', 'Current Student');   // Status
+      googleFormData.append('entry.1481088592', new Date().toISOString().split('T')[0]); // Today's date
+      googleFormData.append('entry.16072526', formData.get('additionalInfo') || 'No additional info'); // Additional info
 
-      await apiRequest('POST', '/api/contact', data);
+      // Submit to Google Form
+      await fetch('https://docs.google.com/forms/d/e/1FAIpQLSfyD4ph9b7DkblGcpu6eiYKIGmO4M38FNvLqcdufUcu3cz0cQ/formResponse', {
+        method: 'POST',
+        body: googleFormData,
+        mode: 'no-cors' // Important for CORS
+      });
 
       toast({
         title: "Application Submitted",
@@ -43,6 +51,7 @@ export function ContactSection() {
       // Reset form
       (e.target as HTMLFormElement).reset();
     } catch (error) {
+      console.error('Form submission error:', error);
       toast({
         title: "Error",
         description: "Failed to submit application. Please try again.",
@@ -69,7 +78,13 @@ export function ContactSection() {
           {/* Contact Form */}
           <div className="bg-white rounded-3xl p-10 shadow-modern-lg card-hover">
             <h3 className="text-3xl font-bold text-ash-dark mb-8 tracking-tight">{t.contact.form.title}</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form 
+              action="https://docs.google.com/forms/d/e/1FAIpQLSfyD4ph9b7DkblGcpu6eiYKIGmO4M38FNvLqcdufUcu3cz0cQ/formResponse" 
+              method="POST" 
+              target="_blank"
+              onSubmit={handleSubmit} 
+              className="space-y-6"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <Label htmlFor="firstName" className="text-sm font-medium text-ash-dark mb-2">
