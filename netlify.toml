@@ -1,21 +1,24 @@
 [build]
-  # Install dependencies for both root and client
-  command = "npm install && cd client && npm install && cd .."
+  # Use the netlify-build script from package.json
+  command = "npm run netlify-build"
   
-  # Build the Vite application
+  # Publish directory - where the built files are located
   publish = "client/dist"
-  base = "client"
+  
+  # Base directory for the build
+  base = "."
   
   # Environment variables
   [build.environment]
     NODE_VERSION = "18"
+    NPM_FLAGS = "--legacy-peer-deps"
 
 # Development settings (for netlify dev)
 [dev]
   command = "npm run dev:all"
   port = 5173  # Vite's default port
-  publish = "client/dist"
   targetPort = 5173
+  publish = "client/dist"
 
 # Redirect all requests to index.html for client-side routing
 [[redirects]]
@@ -23,6 +26,6 @@
   to = "/index.html"
   status = 200
 
-# Configure build settings for the client
+# Configure build settings
 [build.processing]
   skip_processing = true
