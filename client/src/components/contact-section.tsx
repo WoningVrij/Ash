@@ -8,8 +8,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
-import { apiRequest } from "@/lib/queryClient";
-
 export function ContactSection() {
   const { t } = useLanguage();
   const { toast } = useToast();
@@ -24,10 +22,16 @@ export function ContactSection() {
       
       // Map form data to Google Form field names
       const googleFormData = new URLSearchParams();
-      googleFormData.append('entry.1692253209', formData.get('firstName') as string);  // First Name
-      googleFormData.append('entry.807464301', formData.get('lastName') as string);   // Last Name
-      googleFormData.append('entry.120832022', formData.get('email') as string);      // Email
-      googleFormData.append('entry.1711027045', formData.get('phone') as string);     // Phone
+      // Safely get and append form values with type checking
+      const getFormValue = (key: string, defaultValue: string = '') => {
+        const value = formData.get(key);
+        return value ? value.toString() : defaultValue;
+      };
+
+      googleFormData.append('entry.1692253209', getFormValue('firstName'));  // First Name
+      googleFormData.append('entry.807464301', getFormValue('lastName'));   // Last Name
+      googleFormData.append('entry.120832022', getFormValue('email'));      // Email
+      googleFormData.append('entry.1711027045', getFormValue('phone'));     // Phone
       
       // Add default values for required fields
       googleFormData.append('entry.1238028819', 'Either Location');  // Location preference

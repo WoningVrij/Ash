@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, Shield, Handshake, Clock } from "lucide-react";
+import { Check, Shield, Clock, Handshake as HandshakeIcon } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 
 export function PricingSection() {
@@ -142,7 +142,7 @@ export function PricingSection() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-ash-orange rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Handshake className="text-white w-6 h-6" />
+                  <HandshakeIcon className="w-5 h-5 text-ash-primary" />
                 </div>
                 <h4 className="font-semibold text-black mb-2">{t.pricing.whyAnnual.fairAccess.title}</h4>
                 <p className="text-ash-gray text-sm">

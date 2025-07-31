@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "wouter";
+// Link component is imported from wouter but not currently used
+// Keeping it for future use in navigation items
 import { Menu, X } from "lucide-react";
 import { AshLogo } from "@/assets/logo";
 import { useLanguage } from "@/hooks/use-language";
