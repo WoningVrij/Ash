@@ -22,12 +22,16 @@ export function ContactSection() {
       
       // Map form data to Google Form field names
       const googleFormData = new URLSearchParams();
-      // Safely get and append form values with type checking
-      const getFormValue = (key: string, defaultValue: string = '') => {
+      
+      // Helper function to safely get form values as strings
+      const getFormValue = (key: string, defaultValue: string = ''): string => {
         const value = formData.get(key);
-        return value ? value.toString() : defaultValue;
+        if (value === null || value === undefined) return defaultValue;
+        if (value instanceof File) return ''; // Handle file inputs if any
+        return value.toString();
       };
 
+      // Add form values
       googleFormData.append('entry.1692253209', getFormValue('firstName'));  // First Name
       googleFormData.append('entry.807464301', getFormValue('lastName'));   // Last Name
       googleFormData.append('entry.120832022', getFormValue('email'));      // Email
@@ -38,7 +42,7 @@ export function ContactSection() {
       googleFormData.append('entry.1829289710', 'Room (€525/month)'); // Room type
       googleFormData.append('entry.268914346', 'Current Student');   // Status
       googleFormData.append('entry.1481088592', new Date().toISOString().split('T')[0]); // Today's date
-      googleFormData.append('entry.16072526', formData.get('additionalInfo') || 'No additional info'); // Additional info
+      googleFormData.append('entry.16072526', getFormValue('additionalInfo', 'No additional info')); // Additional info
 
       // Submit to Google Form
       await fetch('https://docs.google.com/forms/d/e/1FAIpQLSfyD4ph9b7DkblGcpu6eiYKIGmO4M38FNvLqcdufUcu3cz0cQ/formResponse', {
