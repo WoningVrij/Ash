@@ -26,6 +26,3 @@
   to = "/index.html"
   status = 200
 
-# Configure build settings
-[build.processing]
-  skip_processing = true
