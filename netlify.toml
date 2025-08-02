@@ -20,24 +20,11 @@
   targetPort = 5173
   publish = "client/dist"
 
-# Redirect all requests to index.html for client-side routing, except for existing files.
+# Redirect all requests to index.html for client-side routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = false
-  conditions = {
-    Role = ["!admin"]
-  }
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-  force = true
-  conditions = {
-    Role = ["admin"]
-  }
 
 # Configure build settings
 [build.processing]
