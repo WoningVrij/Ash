@@ -72,10 +72,10 @@ export function PricingSection() {
           </div>
 
           {/* Studio Pricing */}
-          <div className="bg-white rounded-3xl shadow-modern-lg p-10 border-2 border-ash-orange relative card-hover">
+          <div className="bg-white rounded-3xl shadow-modern-lg p-6 md:p-10 border-2 border-ash-orange relative card-hover">
             {/* Popular badge */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-              <Badge className="bg-gradient-orange text-white px-8 py-3 text-lg font-bold shadow-orange">
+            <div className="absolute -top-4 sm:-top-6 left-1/2 transform -translate-x-1/2 w-4/5 sm:w-auto">
+              <Badge className="bg-gradient-orange text-white px-4 sm:px-8 py-2 sm:py-3 text-sm sm:text-lg font-bold shadow-orange w-full sm:w-auto">
                 {t.pricing.studio.popular}
               </Badge>
             </div>

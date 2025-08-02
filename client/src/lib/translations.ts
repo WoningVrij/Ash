@@ -241,7 +241,7 @@ export const en: Translation = {
   },
   hero: {
     title: "Housing for International Students",
-    subtitle: "After Graduation",
+    subtitle: "Post-Study",
     description: "No paperwork hassles. No bureaucracy. Just affordable, flexible housing for students and graduates who want to stay in the Netherlands.",
     viewRooms: "View Available Rooms",
     learnMore: "Learn More",
@@ -285,7 +285,7 @@ export const en: Translation = {
     subtitle: "We're launching in two vibrant Dutch cities with more locations coming soon.",
     amsterdam: {
       title: "Amsterdam East",
-      status: "Opening Soon",
+      status: "Available Now",
       description: "Former office building converted into modern rooms and studios. Located in vibrant Amsterdam-East with excellent transport connections.",
       rooms: "Rooms Available",
       studios: "Studios Available",
@@ -362,7 +362,7 @@ export const en: Translation = {
     subtitle: "Everything you need to know about After Student Housing",
     questions: {
       whoCanApply: {
-        question: "Who can apply for After Student Housing housing?",
+        question: "Who can apply for After Student Housing?",
         answer: "Anyone between 18 and 35 years old who is studying, recently graduated, or wants to stay in the Netherlands to build their future. International students are especially welcome, and we don't require Dutch residency or paperwork.",
       },
       documents: {
@@ -406,9 +406,9 @@ export const en: Translation = {
       movingDate: "When do you need housing?",
       additionalInfo: "Additional Information",
       placeholder: "Tell us about yourself, your study program, future plans, or any questions...",
-      consent: "I understand that ASH requires annual payment upfront and that I'm eligible for this housing as someone aged 18-35 who is studying, graduated, or building a future in the Netherlands.",
+      consent: "I understand that After Student Housing requires annual payment upfront and that I'm eligible for this housing as someone aged 18-35 who is studying, graduated, or building a future in the Netherlands.",
       submit: "Submit Application",
-      submitSuccess: "Thank you for your application! We will contact you within 24 hours.",
+      submitSuccess: "Thank you for your application! We will contact you within 48 hours.",
     },
     info: {
       title: "Contact Information",
@@ -479,8 +479,8 @@ export const nl: Translation = {
     learnMore: "Meer Informatie",
   },
   features: {
-    title: "Waarom Kiezen voor After Student Housing?",
-    subtitle: "Wij wegnemen de barrières die internationale studenten belemmeren bij het vinden van huisvesting in Nederland.",
+    title: "Waarom kiezen voor After Student Housing?",
+    subtitle: "Alles wat je moet weten over After Student Housing",
     noBureaucracy: {
       title: "Geen Bureaucratie",
       description: "Geen loonstroken, bankafschriften, BRP-registratie of werkgeversverklaringen vereist. Gewoon eenvoudige, duidelijke huisvesting.",
@@ -591,11 +591,11 @@ export const nl: Translation = {
   },
   faq: {
     title: "Veelgestelde Vragen",
-    subtitle: "Alles wat je moet weten over After Student Housing huisvesting",
+    subtitle: "Alles wat je moet weten over After Student Housing",
     questions: {
       whoCanApply: {
-        question: "Wie kan zich aanmelden voor After Student Housing huisvesting?",
-        answer: "Iedereen tussen 18 en 35 jaar oud die studeert, recent is afgestudeerd, of in Nederland wil blijven om hun toekomst op te bouwen. Internationale studenten zijn speciaal welkom, en we vereisen geen Nederlandse verblijfsstatus of papierwerk.",
+        question: "Wie kan zich aanmelden voor After Student Housing?",
+        answer: "Internationale studenten van 18-35 jaar die in Nederland willen blijven wonen na hun studie. Of je nu een baan hebt, een zoekjaar neemt, of een eigen bedrijf start, bij ons ben je welkom. Geen inkomenseisen, geen gedoe met garantstellingen.",
       },
       documents: {
         question: "Welke documenten heb ik nodig om aan te melden?",
@@ -610,8 +610,8 @@ export const nl: Translation = {
         answer: "Alles wat je nodig hebt: gas, water, elektriciteit, hoge snelheid internet, complete meubels, gemeentelijke belastingen en basis huishoudelijke artikelen. Je hoeft alleen je persoonlijke spullen mee te nemen en in te trekken.",
       },
       legal: {
-        question: "Is After Student Housing huisvesting legaal en veilig?",
-        answer: "Absoluut. We werken direct samen met eigenaren en gemeenten om ervoor te zorgen dat al onze huisvestingsprojecten volledig legaal en compliant zijn. Onze contracten zijn standaard huurovereenkomsten, en alle gebouwen voldoen aan Nederlandse veiligheids- en huisvestingsnormen.",
+        question: "Is After Student Housing legaal en veilig?",
+        answer: "Ja, onze huisvesting is volledig legaal en voldoet aan alle Nederlandse wet- en regelgeving. We werken uitsluitend met gecertificeerde vastgoedeigenaren en zorgen voor duidelijke contracten. Je veiligheid en rechten staan bij ons voorop.",
       },
       registration: {
         question: "Hoe registreer ik me voor gemeentelijke diensten?",
@@ -624,10 +624,10 @@ export const nl: Translation = {
     },
   },
   contact: {
-    title: "Klaar om je Aan te Melden?",
+    title: "Klaar om je aan te melden?",
     subtitle: "Neem contact op om je plek in Amsterdam of Haarlem veilig te stellen. We reageren binnen 24 uur.",
     form: {
-      title: "Meld je Nu Aan",
+      title: "Meld je nu aan",
       firstName: "Voornaam",
       lastName: "Achternaam",
       email: "E-mailadres",
@@ -640,7 +640,7 @@ export const nl: Translation = {
       placeholder: "Vertel ons over jezelf, je studieprogramma, toekomstplannen of eventuele vragen...",
       consent: "Ik begrijp dat After Student Housing jaarlijkse vooruitbetaling vereist en dat ik geschikt ben voor deze huisvesting als iemand van 18-35 jaar die studeert, is afgestudeerd of een toekomst opbouwt in Nederland.",
       submit: "Aanmelding Versturen",
-      submitSuccess: "Bedankt voor je aanmelding! We nemen binnen 24 uur contact met je op.",
+      submitSuccess: "Bedankt voor je aanmelding! We nemen binnen 48 uur contact met je op.",
     },
     info: {
       title: "Contactinformatie",

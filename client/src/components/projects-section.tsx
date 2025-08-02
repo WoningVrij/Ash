@@ -82,7 +82,9 @@ export function ProjectsSection() {
             <div className="p-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-black">{t.projects.amsterdam.title}</h3>
-
+                <span className="bg-ash-orange text-white text-sm font-medium px-3 py-1 rounded-full">
+                  {t.projects.amsterdam.status}
+                </span>
               </div>
 
               <p className="text-ash-gray mb-6">
@@ -136,7 +138,9 @@ export function ProjectsSection() {
             <div className="p-8">
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-2xl font-bold text-black">{t.projects.haarlem.title}</h3>
-
+                <span className="bg-ash-orange text-white text-sm font-medium px-3 py-1 rounded-full">
+                  {t.projects.haarlem.status}
+                </span>
               </div>
 
               <p className="text-ash-gray mb-6">

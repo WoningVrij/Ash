@@ -33,7 +33,7 @@ export function InteractiveImage({
               size="sm"
             >
               <Expand className="w-4 h-4" />
-              3D View
+              2D/3D view for desktop
             </Button>
           </div>
         </div>

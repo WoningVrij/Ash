@@ -267,7 +267,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-black">{t.contact.info.phone}</h4>
-                    <p className="text-ash-gray">+31 20 123 4567</p>
+                    <p className="text-ash-gray">+31 6 NBA</p>
                     <p className="text-sm text-ash-gray">{t.contact.info.phoneHours}</p>
                   </div>
                 </div>
