@@ -19,7 +19,7 @@ export function HeroSection() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-ash-dark leading-tight mb-8 tracking-tight">
               {t.hero.title}
               <br />
-              <span className="bg-gradient-orange bg-clip-text text-transparent">{t.hero.subtitle}</span>
+                            <span className="bg-gradient-orange bg-clip-text text-transparent animate-pulse" style={{ animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}>{t.hero.subtitle}</span>
             </h1>
             <p className="text-xl md:text-2xl text-ash-gray mb-10 leading-relaxed max-w-2xl">
               {t.hero.description}
@@ -27,7 +27,12 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-6">
               <Button
                 onClick={() => scrollToSection('projects')}
-                className="bg-gradient-orange text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-ash-orange-dark transition-all duration-300 shadow-orange hover:shadow-lg transform hover:scale-105"
+                className="bg-gradient-orange text-white px-10 py-5 rounded-xl font-semibold text-lg hover:bg-ash-orange-dark transition-all duration-300 shadow-orange hover:shadow-lg transform hover:scale-105 animate-pulse"
+                style={{
+                  animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                  backgroundSize: '200% 200%',
+                  backgroundImage: 'linear-gradient(45deg, #FF6B35, #FF9E1F, #FF6B35)'
+                }}
               >
                 {t.hero.viewRooms}
               </Button>

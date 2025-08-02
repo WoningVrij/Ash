@@ -27,7 +27,23 @@ export function Navigation() {
               className="h-12 w-auto object-contain"
             />
             <span className="text-2xl font-bold text-ash-dark tracking-tight relative top-[-1px]" style={{lineHeight: 1, fontFamily: `'Comic Neue', cursive`}}>
-              <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>A</span>fter <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>S</span>tudent <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>H</span>ousing
+              <span className="bg-gradient-orange bg-clip-text text-transparent animate-pulse" style={{
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent',
+                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+              }}>A</span>fter 
+              <span className="bg-gradient-orange bg-clip-text text-transparent animate-pulse" style={{
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent',
+                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                animationDelay: '0.2s'
+              }}>S</span>tudent 
+              <span className="bg-gradient-orange bg-clip-text text-transparent animate-pulse" style={{
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent',
+                animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                animationDelay: '0.4s'
+              }}>H</span>ousing
             </span>
           </div>
 

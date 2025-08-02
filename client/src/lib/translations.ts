@@ -153,6 +153,10 @@ export interface Translation {
         question: string;
         answer: string;
       };
+      canIRegister: {
+        question: string;
+        answer: string;
+      };
     };
   };
   contact: {
@@ -198,6 +202,10 @@ export interface Translation {
         description: string;
       };
       step4: {
+        title: string;
+        description: string;
+      };
+      step5: {
         title: string;
         description: string;
       };
@@ -302,7 +310,7 @@ export const en: Translation = {
     viewDetails: "Apply",
   },
   pricing: {
-    title: "Simple, Transparent Pricing",
+    title: "Pricing",
     subtitle: "All-inclusive pricing with no hidden costs. Pay for one year upfront and enjoy hassle-free living.",
     room: {
       title: "Room",
@@ -377,6 +385,10 @@ export const en: Translation = {
         question: "How do I register for municipal services?",
         answer: "You can use your After Student Housing address for municipal registration (BRP), opening bank accounts, and other official purposes. We provide all necessary documentation to support your registration process with local authorities.",
       },
+      canIRegister: {
+        question: "Can I register at the address?",
+        answer: "Yes, you can 🎉!",
+      },
     },
   },
   contact: {
@@ -401,8 +413,8 @@ export const en: Translation = {
     info: {
       title: "Contact Information",
       email: "Email",
-      emailResponse: "We respond within 24 hours",
-      phone: "Phone",
+      emailResponse: "We respond within 48 hours",
+      phone: "WhatsApp",
       phoneHours: "Mon-Fri, 9:00-17:00",
       office: "Office",
       officeNote: "By appointment only",
@@ -411,19 +423,23 @@ export const en: Translation = {
       title: "Next Steps",
       step1: {
         title: "Submit Application",
-        description: "Fill out the form with your preferences",
+        description: "Fill out the form with your preferences.",
       },
       step2: {
-        title: "Quick Review", 
-        description: "We'll contact you within 24 hours",
+        title: "Application Review",
+        description: "We'll assess your application within 24 hours.",
       },
       step3: {
-        title: "Virtual Tour",
-        description: "See your potential new home online",
+        title: "Approval & Offer",
+        description: "You'll receive a response with next steps or a personalized offer.",
       },
       step4: {
-        title: "Move In",
-        description: "Sign contract and start your new chapter",
+        title: "Sign & Pay",
+        description: "Sign the contract and complete the payment.",
+      },
+      step5: {
+        title: "Schedule Your Move-In Date",
+        description: "Choose your preferred move-in day and get ready to settle in.",
       },
     },
     options: {
@@ -442,7 +458,7 @@ export const en: Translation = {
     description: "After Student Housing provides accessible, flexible housing solutions for international students and graduates in the Netherlands.",
     quickLinks: "Quick Links",
     legal: "Legal",
-    copyright: "© 2025 ASH - After Student Housing. All rights reserved.",
+    copyright: " 2025 ASH - After Student Housing. All rights reserved.",
   },
 };
 
@@ -463,7 +479,7 @@ export const nl: Translation = {
     learnMore: "Meer Informatie",
   },
   features: {
-    title: "Waarom Kiezen voor ASH?",
+    title: "Waarom Kiezen voor After Student Housing?",
     subtitle: "Wij wegnemen de barrières die internationale studenten belemmeren bij het vinden van huisvesting in Nederland.",
     noBureaucracy: {
       title: "Geen Bureaucratie",
@@ -479,7 +495,7 @@ export const nl: Translation = {
     },
   },
   about: {
-    title: "Over ASH — After Student Housing",
+    title: "Over After Student Housing",
     description1: "Internationale studenten dragen bij aan het leven en de energie van Nederlandse steden. Maar wanneer hun studie eindigt, verdwijnen hun huisvestingsopties vaak.",
     description2: "Studentenkamers moeten worden ontruimd. Studio's zijn tijdelijk. En de reguliere woningmarkt is een doodlopende weg: geen permanent arbeidscontract, geen Nederlandse papieren, geen lange huurgeschiedenis.",
     subtitle: "After Student Housing biedt een echt alternatief.",
@@ -501,7 +517,7 @@ export const nl: Translation = {
     subtitle: "We lanceren in twee levendige Nederlandse steden met meer locaties binnenkort.",
     amsterdam: {
       title: "Amsterdam Oost",
-      status: "Binnenkort Open",
+      status: "September 2025",
       description: "Voormalig kantoorgebouw omgebouwd tot moderne kamers en studio's. Gelegen in het levendige Amsterdam-Oost met uitstekende vervoersverbindingen.",
       rooms: "Kamers Beschikbaar",
       studios: "Studio's Beschikbaar",
@@ -513,7 +529,7 @@ export const nl: Translation = {
     },
     haarlem: {
       title: "Haarlem Centrum",
-      status: "Nu Beschikbaar",
+      status: "Augustus 2025",
       description: "Instapklaar gebouw in het hart van historisch Haarlem. Perfect voor studenten en afgestudeerden die houden van charme en cultuur.",
       rooms: "Kamers Beschikbaar",
       studios: "Studio's Beschikbaar",
@@ -526,7 +542,7 @@ export const nl: Translation = {
     viewDetails: "Aanmelden",
   },
   pricing: {
-    title: "Eenvoudige, Transparante Prijzen",
+    title: "Prijzen",
     subtitle: "All-inclusive prijzen zonder verborgen kosten. Betaal een jaar vooruit en geniet van zorgeloos wonen.",
     room: {
       title: "Kamer",
@@ -575,10 +591,10 @@ export const nl: Translation = {
   },
   faq: {
     title: "Veelgestelde Vragen",
-    subtitle: "Alles wat je moet weten over ASH huisvesting",
+    subtitle: "Alles wat je moet weten over After Student Housing huisvesting",
     questions: {
       whoCanApply: {
-        question: "Wie kan zich aanmelden voor ASH huisvesting?",
+        question: "Wie kan zich aanmelden voor After Student Housing huisvesting?",
         answer: "Iedereen tussen 18 en 35 jaar oud die studeert, recent is afgestudeerd, of in Nederland wil blijven om hun toekomst op te bouwen. Internationale studenten zijn speciaal welkom, en we vereisen geen Nederlandse verblijfsstatus of papierwerk.",
       },
       documents: {
@@ -594,12 +610,16 @@ export const nl: Translation = {
         answer: "Alles wat je nodig hebt: gas, water, elektriciteit, hoge snelheid internet, complete meubels, gemeentelijke belastingen en basis huishoudelijke artikelen. Je hoeft alleen je persoonlijke spullen mee te nemen en in te trekken.",
       },
       legal: {
-        question: "Is ASH huisvesting legaal en veilig?",
+        question: "Is After Student Housing huisvesting legaal en veilig?",
         answer: "Absoluut. We werken direct samen met eigenaren en gemeenten om ervoor te zorgen dat al onze huisvestingsprojecten volledig legaal en compliant zijn. Onze contracten zijn standaard huurovereenkomsten, en alle gebouwen voldoen aan Nederlandse veiligheids- en huisvestingsnormen.",
       },
       registration: {
         question: "Hoe registreer ik me voor gemeentelijke diensten?",
-        answer: "Je kunt je ASH-adres gebruiken voor gemeentelijke registratie (BRP), het openen van bankrekeningen en andere officiële doeleinden. We verstrekken alle benodigde documentatie om je registratieproces bij lokale autoriteiten te ondersteunen.",
+        answer: "Je kunt je After Student Housing-adres gebruiken voor gemeentelijke registratie (BRP), het openen van bankrekeningen en andere officiële doeleinden. We verstrekken alle benodigde documentatie om je registratieproces bij lokale autoriteiten te ondersteunen.",
+      },
+      canIRegister: {
+        question: "Kan ik me inschrijven op het adres?",
+        answer: "Ja, dat kan je 🎉!",
       },
     },
   },
@@ -618,15 +638,15 @@ export const nl: Translation = {
       movingDate: "Wanneer heb je huisvesting nodig?",
       additionalInfo: "Aanvullende Informatie",
       placeholder: "Vertel ons over jezelf, je studieprogramma, toekomstplannen of eventuele vragen...",
-      consent: "Ik begrijp dat ASH jaarlijkse vooruitbetaling vereist en dat ik geschikt ben voor deze huisvesting als iemand van 18-35 jaar die studeert, is afgestudeerd of een toekomst opbouwt in Nederland.",
+      consent: "Ik begrijp dat After Student Housing jaarlijkse vooruitbetaling vereist en dat ik geschikt ben voor deze huisvesting als iemand van 18-35 jaar die studeert, is afgestudeerd of een toekomst opbouwt in Nederland.",
       submit: "Aanmelding Versturen",
       submitSuccess: "Bedankt voor je aanmelding! We nemen binnen 24 uur contact met je op.",
     },
     info: {
       title: "Contactinformatie",
       email: "E-mail",
-      emailResponse: "We reageren binnen 24 uur",
-      phone: "Telefoon",
+      emailResponse: "We reageren binnen 48 uur",
+      phone: "WhatsApp",
       phoneHours: "Ma-Vr, 9:00-17:00",
       office: "Kantoor",
       officeNote: "Alleen op afspraak",
@@ -635,19 +655,23 @@ export const nl: Translation = {
       title: "Volgende Stappen",
       step1: {
         title: "Aanmelding Versturen",
-        description: "Vul het formulier in met je voorkeuren",
+        description: "Vul het formulier in met je voorkeuren.",
       },
       step2: {
-        title: "Snelle Beoordeling",
-        description: "We nemen binnen 24 uur contact met je op",
+        title: "Aanvraagbeoordeling",
+        description: "We beoordelen je aanvraag binnen 24 uur.",
       },
       step3: {
-        title: "Virtuele Rondleiding",
-        description: "Bekijk je potentiële nieuwe thuis online",
+        title: "Goedkeuring & Aanbod",
+        description: "Je ontvangt een reactie met vervolgstappen of een persoonlijk aanbod.",
       },
       step4: {
-        title: "Intrekken",
-        description: "Contract tekenen en je nieuwe hoofdstuk beginnen",
+        title: "Ondertekenen & Betalen",
+        description: "Onderteken het contract en voltooi de betaling.",
+      },
+      step5: {
+        title: "Plan Je Verhuisdatum",
+        description: "Kies je gewenste verhuisdatum en maak je klaar om erin te trekken.",
       },
     },
     options: {

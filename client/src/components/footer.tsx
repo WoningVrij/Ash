@@ -34,7 +34,7 @@ export function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="md:col-start-4">
             <h4 className="font-semibold text-white mb-4">{t.footer.quickLinks}</h4>
             <ul className="space-y-2">
               <li>
@@ -80,32 +80,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
-          <div>
-            <h4 className="font-semibold text-white mb-4">{t.footer.legal}</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="#" className="text-gray-300 hover:text-ash-orange transition-colors">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-ash-orange transition-colors">
-                  Terms of Service
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-ash-orange transition-colors">
-                  Rental Agreement
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-ash-orange transition-colors">
-                  House Rules
-                </a>
-              </li>
-            </ul>
-          </div>
+
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">

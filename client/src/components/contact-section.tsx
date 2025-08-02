@@ -319,6 +319,16 @@ export function ContactSection() {
                     <p className="text-ash-gray text-sm">{t.contact.steps.step4.description}</p>
                   </div>
                 </div>
+
+                <div className="flex items-start">
+                  <div className="w-8 h-8 bg-ash-orange rounded-full flex items-center justify-center mr-4 text-white font-bold text-sm">
+                    5
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-black">{t.contact.steps.step5.title}</h4>
+                    <p className="text-ash-gray text-sm">{t.contact.steps.step5.description}</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

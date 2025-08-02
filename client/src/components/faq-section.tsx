@@ -41,6 +41,11 @@ export function FAQSection() {
       question: t.faq.questions.registration.question,
       answer: t.faq.questions.registration.answer,
     },
+    {
+      key: 'canIRegister',
+      question: t.faq.questions.canIRegister.question,
+      answer: t.faq.questions.canIRegister.answer,
+    },
   ];
 
   return (
