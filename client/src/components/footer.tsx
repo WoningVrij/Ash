@@ -1,4 +1,3 @@
-import { AshLogo } from "@/assets/logo";
 import { useLanguage } from "@/hooks/use-language";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 
@@ -18,10 +17,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center mb-6">
-              <AshLogo className="h-8 w-8 text-white" />
-              <span className="ml-3 text-2xl font-bold">ASH</span>
-            </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {t.footer.description}
             </p>

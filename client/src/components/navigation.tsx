@@ -1,8 +1,5 @@
 import { useState } from "react";
-// Link component is imported from wouter but not currently used
-// Keeping it for future use in navigation items
 import { Menu, X } from "lucide-react";
-import { AshLogo } from "@/assets/logo";
 import { useLanguage } from "@/hooks/use-language";
 import { Button } from "@/components/ui/button";
 
@@ -23,8 +20,12 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex items-center gap-1">
-            <AshLogo className="h-[60px] w-[60px] text-ash-orange" />
+          <div className="flex items-center gap-3">
+            <img 
+              src="/logo.png" 
+              alt="ASH Logo" 
+              className="h-12 w-auto object-contain"
+            />
             <span className="text-2xl font-bold text-ash-dark tracking-tight relative top-[-1px]" style={{lineHeight: 1, fontFamily: `'Comic Neue', cursive`}}>
               <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>A</span>fter <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>S</span>tudent <span className="bg-gradient-orange bg-clip-text text-transparent" style={{WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent'}}>H</span>ousing
             </span>
@@ -106,7 +107,7 @@ export function Navigation() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div className="md:hidden glass-effect border-t border-gray-200/30 backdrop-blur-md bg-white/80">
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button
               onClick={() => scrollToSection('home')}

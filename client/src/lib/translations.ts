@@ -239,7 +239,7 @@ export const en: Translation = {
     learnMore: "Learn More",
   },
   features: {
-    title: "Why Choose ASH?",
+    title: "Why Choose After Student Housing?",
     subtitle: "We remove the barriers that prevent international students from finding housing in the Netherlands.",
     noBureaucracy: {
       title: "No Bureaucracy",
@@ -255,10 +255,10 @@ export const en: Translation = {
     },
   },
   about: {
-    title: "About ASH — After Student Housing",
+    title: "About ASH:\nAfter Student Housing",
     description1: "International students contribute to the life and energy of Dutch cities. But when their studies come to an end, their housing options often disappear.",
     description2: "Student rooms must be vacated. Studios are temporary. And the regular housing market is a dead end: no permanent job contract, no Dutch paperwork, no long rental history.",
-    subtitle: "ASH offers a real alternative.",
+    subtitle: "After Student Housing offers a real alternative.",
     flexible: {
       title: "Flexible & Creative",
       description: "Converting vacant buildings into quality housing solutions",
@@ -299,7 +299,7 @@ export const en: Translation = {
         bike: "Bike-friendly neighborhood",
       },
     },
-    viewDetails: "View Details",
+    viewDetails: "Apply",
   },
   pricing: {
     title: "Simple, Transparent Pricing",
@@ -351,10 +351,10 @@ export const en: Translation = {
   },
   faq: {
     title: "Frequently Asked Questions",
-    subtitle: "Everything you need to know about ASH housing",
+    subtitle: "Everything you need to know about After Student Housing",
     questions: {
       whoCanApply: {
-        question: "Who can apply for ASH housing?",
+        question: "Who can apply for After Student Housing housing?",
         answer: "Anyone between 18 and 35 years old who is studying, recently graduated, or wants to stay in the Netherlands to build their future. International students are especially welcome, and we don't require Dutch residency or paperwork.",
       },
       documents: {
@@ -370,12 +370,12 @@ export const en: Translation = {
         answer: "Everything you need: gas, water, electricity, high-speed internet, complete furniture, municipal taxes, and basic household items. You just need to bring your personal belongings and move in.",
       },
       legal: {
-        question: "Is ASH housing legal and safe?",
+        question: "Is After Student Housing legal and safe?",
         answer: "Absolutely. We work directly with property owners and municipalities to ensure all our housing projects are fully legal and compliant. Our contracts are standard rental agreements, and all buildings meet Dutch safety and housing standards.",
       },
       registration: {
         question: "How do I register for municipal services?",
-        answer: "You can use your ASH address for municipal registration (BRP), opening bank accounts, and other official purposes. We provide all necessary documentation to support your registration process with local authorities.",
+        answer: "You can use your After Student Housing address for municipal registration (BRP), opening bank accounts, and other official purposes. We provide all necessary documentation to support your registration process with local authorities.",
       },
     },
   },
@@ -442,7 +442,7 @@ export const en: Translation = {
     description: "After Student Housing provides accessible, flexible housing solutions for international students and graduates in the Netherlands.",
     quickLinks: "Quick Links",
     legal: "Legal",
-    copyright: "© 2024 ASH - After Student Housing. All rights reserved.",
+    copyright: "© 2025 ASH - After Student Housing. All rights reserved.",
   },
 };
 
@@ -482,10 +482,10 @@ export const nl: Translation = {
     title: "Over ASH — After Student Housing",
     description1: "Internationale studenten dragen bij aan het leven en de energie van Nederlandse steden. Maar wanneer hun studie eindigt, verdwijnen hun huisvestingsopties vaak.",
     description2: "Studentenkamers moeten worden ontruimd. Studio's zijn tijdelijk. En de reguliere woningmarkt is een doodlopende weg: geen permanent arbeidscontract, geen Nederlandse papieren, geen lange huurgeschiedenis.",
-    subtitle: "ASH biedt een echt alternatief.",
+    subtitle: "After Student Housing biedt een echt alternatief.",
     flexible: {
       title: "Flexibel & Creatief",
-      description: "Leegstaande gebouwen omzetten naar kwaliteitswoningen",
+      description: "Leegstaande gebouwen, beschikbare kantoren en studio's, omzetten naar kwaliteitswoningen",
     },
     legal: {
       title: "Juridisch Solide",
@@ -523,7 +523,7 @@ export const nl: Translation = {
         bike: "Fietsvriendelijke buurt",
       },
     },
-    viewDetails: "Bekijk Details",
+    viewDetails: "Aanmelden",
   },
   pricing: {
     title: "Eenvoudige, Transparante Prijzen",
@@ -666,7 +666,7 @@ export const nl: Translation = {
     description: "After Student Housing biedt toegankelijke, flexibele huisvestingsoplossingen voor internationale studenten en afgestudeerden in Nederland.",
     quickLinks: "Snelle Links",
     legal: "Juridisch",
-    copyright: "© 2024 ASH - After Student Housing. Alle rechten voorbehouden.",
+    copyright: "© 2025 ASH - After Student Housing. Alle rechten voorbehouden.",
   },
 };
 

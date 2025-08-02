@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useLanguage } from "@/hooks/use-language";
 export function ContactSection() {
   const { t } = useLanguage();
@@ -48,8 +48,14 @@ export function ContactSection() {
       await fetch('https://docs.google.com/forms/d/e/1FAIpQLSfyD4ph9b7DkblGcpu6eiYKIGmO4M38FNvLqcdufUcu3cz0cQ/formResponse', {
         method: 'POST',
         body: googleFormData,
-        mode: 'no-cors' // Important for CORS
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
       });
+      
+      // Note: With no-cors mode, we can't read the response
+      // But the form should still submit successfully
 
       toast({
         title: "Application Submitted",
@@ -62,7 +68,7 @@ export function ContactSection() {
       console.error('Form submission error:', error);
       toast({
         title: "Error",
-        description: "Failed to submit application. Please try again.",
+        description: error instanceof Error ? error.message : "Failed to submit application. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -87,11 +93,9 @@ export function ContactSection() {
           <div className="bg-white rounded-3xl p-10 shadow-modern-lg card-hover">
             <h3 className="text-3xl font-bold text-ash-dark mb-8 tracking-tight">{t.contact.form.title}</h3>
             <form 
-              action="https://docs.google.com/forms/d/e/1FAIpQLSfyD4ph9b7DkblGcpu6eiYKIGmO4M38FNvLqcdufUcu3cz0cQ/formResponse" 
-              method="POST" 
-              target="_blank"
               onSubmit={handleSubmit} 
               className="space-y-6"
+              noValidate
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
@@ -154,7 +158,7 @@ export function ContactSection() {
                     <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ash-orange focus:border-transparent">
                       <SelectValue placeholder="Select location" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white border border-gray-200 shadow-lg">
                       <SelectItem value="amsterdam">{t.contact.options.amsterdam}</SelectItem>
                       <SelectItem value="haarlem">{t.contact.options.haarlem}</SelectItem>
                       <SelectItem value="either">{t.contact.options.either}</SelectItem>
@@ -169,7 +173,7 @@ export function ContactSection() {
                     <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ash-orange focus:border-transparent">
                       <SelectValue placeholder="Select type" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="bg-white border border-gray-200 shadow-lg">
                       <SelectItem value="room">{t.contact.options.room}</SelectItem>
                       <SelectItem value="studio">{t.contact.options.studio}</SelectItem>
                     </SelectContent>
@@ -185,7 +189,7 @@ export function ContactSection() {
                   <SelectTrigger className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-ash-orange focus:border-transparent">
                     <SelectValue placeholder="Select status" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="bg-white border border-gray-200 shadow-lg">
                     <SelectItem value="student">{t.contact.options.student}</SelectItem>
                     <SelectItem value="recent-graduate">{t.contact.options.graduate}</SelectItem>
                     <SelectItem value="job-seeker">{t.contact.options.jobSeeker}</SelectItem>
@@ -252,7 +256,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-black">{t.contact.info.email}</h4>
-                    <p className="text-ash-gray">info@ashhousing.nl</p>
+                    <p className="text-ash-gray">info@afterstudenthousing.com</p>
                     <p className="text-sm text-ash-gray">{t.contact.info.emailResponse}</p>
                   </div>
                 </div>
@@ -268,16 +272,7 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
-                  <div className="w-12 h-12 bg-ash-orange rounded-full flex items-center justify-center mr-4">
-                    <MapPin className="text-white w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-black">{t.contact.info.office}</h4>
-                    <p className="text-ash-gray">Amsterdam, Netherlands</p>
-                    <p className="text-sm text-ash-gray">{t.contact.info.officeNote}</p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
